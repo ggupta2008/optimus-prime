@@ -1,4 +1,4 @@
-package string;
+package stringorarray;
 
 public class CompareTwoSoftwareVersions {
 }

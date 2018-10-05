@@ -1,11 +1,11 @@
-package string;
+package stringorarray;
 
 import java.util.Arrays;
 
 public class Fibonacci {
 
     static int[] fib(int n) {
-        /* Declare an array to store string.Fibonacci numbers. */
+        /* Declare an array to store stringorarray.Fibonacci numbers. */
         int f[] = new int[n + 1]; // 1 extra to handle case, n = 0
         int i;
 

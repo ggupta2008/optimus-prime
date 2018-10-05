@@ -1,4 +1,4 @@
-package string;
+package stringorarray;
 
 import java.util.Stack;
 
