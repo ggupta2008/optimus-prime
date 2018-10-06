@@ -1,11 +1,25 @@
 package stringorarray;
 
+import ds.Stack;
+
 public class PrintWordsInReverse {
 
-    static String wordReverse(String str)
+    static void wordReverse(String str)
     {
-        for (int i = str.length()-1; i >=0; i++) {
+        Stack<String> stringStack = new Stack<>();
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i = 0; i <= str.length() - 1; i++) {
+            if(str.charAt(i) == ' ') {
+                stringStack.push(stringBuffer.toString());
+                stringBuffer = new StringBuffer();
+            } else {
+                stringBuffer.append(str.charAt(i));
+            }
+        }
+        stringStack.push(stringBuffer.toString());
 
+        while (!stringStack.isEmpty()) {
+            System.out.print(stringStack.pop() + " ");
         }
     }
 
@@ -13,6 +27,6 @@ public class PrintWordsInReverse {
     public static void main(String[] args)
     {
         String str = "I AM A GEEK";
-        System.out.print(wordReverse(str));
+        wordReverse(str);
     }
 }
