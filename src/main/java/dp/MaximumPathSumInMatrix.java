@@ -1,21 +1,15 @@
 package dp;
 
 
-//Input : mat[][] = 10 10  2  0 20  4
-//        1  0  0 30  2  5
-//        0 10  4  0  2  0
-//        1  0  2 20  0  4
-//        Output : 74
-//        The maximum sum path is 20-30-4-20.
-//
+
 //        Input : mat[][] = 1 2 3
                     //        9 8 7
                     //        4 5 6
-//        Output : 17
-//        The maximum sum path is 3-8-6.
+//        Output : 31
+//        The maximum sum path is 1-9-8-7-6. The constraint is you can only move down and right
 public class MaximumPathSumInMatrix {
 
-    int maxValue(int[][] input) {
+    static int maxValue(int[][] input) {
         int r = input.length;
         int c = input[0].length;
         int[][] maxValues = new int[r][c];
@@ -33,6 +27,11 @@ public class MaximumPathSumInMatrix {
             }
         }
         return maxValues[r-1][c-1];
+    }
+
+    public static void main(String[] args) {
+        int[][] input = new int[][]{{1,2,3},{9,8,7},{4,5,6}};
+        System.out.println(maxValue(input));
     }
 
 }
