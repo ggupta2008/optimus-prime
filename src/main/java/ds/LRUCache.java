@@ -68,7 +68,7 @@ class LRUCache {
             return -1; // should raise exception here.
         }
         // move the accessed node to the head;
-        this.moveToHead(node);
+        moveToHead(node);
         return node.value;
     }
 

@@ -51,6 +51,16 @@ public class BST {
         }
     }
 
+    public boolean isValidBST(Node root) {
+        return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    public boolean isValidBST(Node root, long minVal, long maxVal) {
+        if (root == null) return true;
+        if (root.value >= maxVal || root.value <= minVal) return false;
+        return isValidBST(root.left, minVal, root.value) && isValidBST(root.right, root.value, maxVal);
+    }
+
     public void postOrder(Node root) {
         if (root.left != null) {
             postOrder(root.left);

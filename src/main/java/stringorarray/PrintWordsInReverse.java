@@ -23,7 +23,6 @@ public class PrintWordsInReverse {
         }
     }
 
-    // Driver code
     public static void main(String[] args)
     {
         String str = "I AM A GEEK";
