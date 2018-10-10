@@ -1,15 +1,22 @@
 package dp;
 
 public class CoinChangeWays {
-    public static int makeChange(int[] coins, int money, int index) { // index is for telling
-                                                                    // which coin we are considering
-                                                                    // for this iteration
-        int amountWithCoin = 0;
-        while (amountWithCoin <= money) {
-            int remaining = money - amountWithCoin;
+     public int[] DENOMINATIONS = {1,2,5,10,20,50,100,500};
 
-            amountWithCoin+=coins[index];
-        }
-        return 0;
+
+     public int combinations(int amount, int currentCoin) {
+         if(amount==0) return 1;
+         if(amount<0) return 0;
+         int nCombinations = 0;
+         for (int i = currentCoin; i < DENOMINATIONS.length; i++) {
+             nCombinations+=combinations(amount-DENOMINATIONS[i], i);
+         }
+         return nCombinations;
+     }
+
+
+    public static void main(String[] args) {
+        CoinChangeWays coinChangeWays = new CoinChangeWays();
+        System.out.println(coinChangeWays.combinations(484,0));
     }
 }
