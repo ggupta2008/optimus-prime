@@ -1,9 +1,7 @@
-package java8;
+package java;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ProducerConsumerUsingBlockingQueue {
     public static class Message {
