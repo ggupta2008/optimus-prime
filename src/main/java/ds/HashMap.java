@@ -30,7 +30,7 @@ class Entry<T,V> {
 
 
 public class HashMap<T,V> {
-    // this is size of hashmap or rather limit of indexes where we will map the hashes
+    // this is s00000000ize of hashmap or rather limit of indexes where we will map the hashes
     private static final int SIZE=10;
     private Entry[] indexTable = new Entry[SIZE];
 

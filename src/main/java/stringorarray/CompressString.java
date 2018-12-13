@@ -20,5 +20,6 @@ public class CompressString {
     public static void main(String[] args) {
         CompressString compressString = new CompressString();
         int result = compressString.compress("aaaaaaabbbbbb".toCharArray());
+        System.out.println(result);
     }
 }

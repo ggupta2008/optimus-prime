@@ -4,7 +4,7 @@ import ds.Stack;
 
 public class PrintWordsInReverse {
 
-    static void wordReverse(String str)
+    private static void wordReverse(String str)
     {
         Stack<String> stringStack = new Stack<>();
         StringBuffer stringBuffer = new StringBuffer();

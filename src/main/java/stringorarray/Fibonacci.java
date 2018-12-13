@@ -37,7 +37,7 @@ public class Fibonacci {
 
     public static void main(String args[]) {
         int n = 9;
-        System.out.println(Arrays.toString(fib(n)));
+        System.out.println(fib2(n));
     }
 
 }
